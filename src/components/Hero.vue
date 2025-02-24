@@ -17,7 +17,9 @@ onMounted(() => {
 <template>
   <section class="hero" id="home">
     <div class="hero-bg">
-      <img :src="images.hero" alt="Hero Background" />
+      <div class="scroll-down-bg">
+        <img src="../assets/scroll-down.gif"/>
+      </div>
     </div>
     <div class="container">
       <div class="hero-content">
@@ -38,19 +40,24 @@ onMounted(() => {
   display: flex;
   align-items: center;
   color: var(--white);
+  /* background: linear-gradient(45deg, rgba(255,0,0,1) 0%,rgba(0,0,255,1) 100%); */
+  background: url(../assets/hero.jpg) no-repeat center center / cover;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: -1;
 }
 
 .hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* Simplified overlay */
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(255,0,0,1) 0%,rgba(0,0,255,1) 57%,rgba(136,136,255,0.3) 80%,rgba(255,255,255,0) 100%); 
+    opacity: 0.5
 }
 
 .hero-bg img {
@@ -61,6 +68,8 @@ onMounted(() => {
 
 .hero-content {
   max-width: 800px;
+    z-index: 12;
+    position: relative;
 }
 
 .hero-title {
@@ -68,19 +77,20 @@ onMounted(() => {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  background: linear-gradient(45deg, #ff0000, #0000ff);
+  /* background: linear-gradient(45deg, #ff0000, #0000ff);
   -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background-clip: text; */
+  color: #ffffff;
 }
 
 .hero-subtitle {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   margin-bottom: 2.5rem;
-  background: linear-gradient(45deg, #ff0000, #0000ff);
+  /* background: linear-gradient(45deg, #ff0000, #0000ff);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: transparent; */
+  color: #ffffff;
   max-width: 600px;
   line-height: 1.6;
 }
@@ -90,8 +100,8 @@ onMounted(() => {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--white);
-  background: #000000;
+  color: #000000;
+  background: #ffffff;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -100,8 +110,16 @@ onMounted(() => {
 .hero-btn:hover {
   transform: translateY(-2px);
   background: #000000;
+  color: #ffffff;
 }
 
+.scroll-down-bg {
+    width: 50px;
+    position: absolute;
+    left: 70px;
+    bottom: 106px;
+    z-index: 2;
+}
 @media (max-width: 768px) {
   .hero-content {
     text-align: center;
@@ -111,6 +129,9 @@ onMounted(() => {
   .hero-btn {
     padding: 0.875rem 2rem;
     font-size: 1rem;
+  }
+  .hero-bg[data-v-edb47f11]::after {
+    width: 100%;
   }
 }
 </style>

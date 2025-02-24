@@ -10,5 +10,5 @@ export const images = {
     plant:
       "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80",
   },
-  logo: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80",
+  logo: "https://i.ibb.co/hFGPBD4j/logo.png",
 };

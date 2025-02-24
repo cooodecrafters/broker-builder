@@ -18,6 +18,7 @@ const sectors = {
         >
           <h3>{{ section }}</h3>
           <ul>
+            
             <li v-for="item in items" :key="item">
               <a href="#">{{ item }}</a>
             </li>
@@ -27,7 +28,7 @@ const sectors = {
 
       <div class="footer-bottom">
         <p>
-          &copy; {{ new Date().getFullYear() }} Builder Company. All rights
+          &copy; {{ new Date().getFullYear() }} Jagannath Buildcon. All rights
           reserved.
         </p>
       </div>

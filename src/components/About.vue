@@ -31,9 +31,12 @@ onMounted(() => {
 <template>
   <section id="about" class="about-section">
     <div class="container">
+      <div class="abound-head">
+        <h2 class="section-title">Who We Are</h2>
+      </div>
       <div class="about-grid">
         <div class="about-content">
-          <h2 class="section-title">Who We Are</h2>
+          
           <p>
             With over 25 years of experience, we've established ourselves as a
             leader in construction and civil engineering. Our commitment to
@@ -73,6 +76,9 @@ onMounted(() => {
   display: grid;
   gap: 3rem;
   margin-bottom: 5rem;
+  background: url("../assets/blue-bg.jpg") no-repeat center center / cover;
+  border-radius: 20px;
+  padding: 50px;
 }
 
 .about-content h2 {
@@ -80,7 +86,7 @@ onMounted(() => {
 }
 
 .about-content p {
-  color: var(--text-light);
+  color: #ffffff;
   margin-bottom: 1.5rem;
 }
 
@@ -102,16 +108,27 @@ onMounted(() => {
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  color: var(--primary);
+  color: transparent;
+  background: linear-gradient(45deg, #ff0000, #0000ff);
+  -webkit-background-clip: text;
+  background-clip: text;
   margin-bottom: 0.5rem;
 }
 
 .stat-text {
-  color: var(--text-light);
+  color: #000;
+  font-size: 20px;
 }
 
+.about-content a.btn {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
 @media (min-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr 1fr;

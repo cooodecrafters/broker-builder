@@ -131,6 +131,7 @@ h3 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
